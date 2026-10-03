@@ -1,0 +1,119 @@
+%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 612 792]
+  /Contents 4 0 R
+  /Resources <<
+    /Font <<
+      /F1 5 0 R
+      /F2 6 0 R
+    >>
+  >>
+>>
+endobj
+4 0 obj
+<<
+  /Length 720
+>>
+stream
+BT
+/F1 22 Tf
+50 740 Td
+(GRORRT - SYSTEMS & AI SOFTWARE ENGINEER) Tj
+/F2 10 Tf
+0 -18 Td
+(github.com/Grorrt  |  AI Tooling, Systems, & Full-Stack Architecture) Tj
+0 -24 Td
+/F1 14 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -16 Td
+/F2 10 Tf
+(Systems and full-stack software engineer specializing in AI agent orchestration,) Tj
+0 -14 Td
+(Model Context Protocol (MCP), automated QA systems, and static security tooling.) Tj
+0 -24 Td
+/F1 14 Tf
+(KEY PROJECTS) Tj
+0 -16 Td
+/F1 11 Tf
+(LeadForge MCP - AI Lead Qualification Engine) Tj
+0 -14 Td
+/F2 10 Tf
+(Implemented 10 Model Context Protocol tools, 4-factor scoring matrix & CRM sync.) Tj
+0 -18 Td
+/F1 11 Tf
+(VerityQA (qa-ai-assistant) - AI-Powered Quality Assurance Platform) Tj
+0 -14 Td
+/F2 10 Tf
+(FastAPI and React engine converting requirement specs to deterministic tests.) Tj
+0 -18 Td
+/F1 11 Tf
+(Malware Analysis Toolkit - Python Security Suite) Tj
+0 -14 Td
+/F2 10 Tf
+(PE disassembly, entropy calculations, YARA rule matching and forensic logging.) Tj
+0 -18 Td
+/F1 11 Tf
+(Atlas Core - Scalable Full-Stack Architecture) Tj
+0 -14 Td
+/F2 10 Tf
+(Modular API gateway, automated database migrations, and load-tested async flows.) Tj
+0 -24 Td
+/F1 14 Tf
+(TECHNICAL SKILLS) Tj
+0 -16 Td
+/F2 10 Tf
+(Languages: Python, TypeScript, JavaScript, SQL, HTML/CSS, Bash) Tj
+0 -14 Td
+(Frameworks & Tools: FastAPI, React, Node.js, MCP SDK, Vite, Tailwind CSS, PyTest) Tj
+0 -14 Td
+(Architectures: Local-first, REST APIs, Microservices, Event-driven, Reverse Engineering) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica-Bold
+>>
+endobj
+6 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000266 00000 n 
+0000001038 00000 n 
+0000001115 00000 n 
+trailer
+<<
+  /Size 7
+  /Root 1 0 R
+>>
+startxref
+1187
+%%EOF

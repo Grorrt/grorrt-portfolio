@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "leadforge-mcp",
+    "full_name": "Grorrt/leadforge-mcp",
+    "description": "AI-powered lead qualification engine for the Model Context Protocol (MCP) with 10 tools, enrichment scoring pipeline, and CRM sync.",
+    "custom_description": "AI-powered lead qualification engine built for the Model Context Protocol (MCP). Features 10 specialized agentic tools, a multi-dimensional ICP scoring matrix, firmographic data enrichment, and seamless CRM export adapters.",
+    "language": "JavaScript",
+    "html_url": "https://github.com/Grorrt/leadforge-mcp",
+    "stargazers_count": 14,
+    "forks_count": 3,
+    "updated_at": "2026-09-28T14:32:00Z",
+    "created_at": "2026-05-12T09:15:00Z",
+    "topics": ["model-context-protocol", "mcp-server", "ai-agents", "lead-scoring", "crm-integration"],
+    "key_details": {
+      "tools_count": "10 MCP Tools",
+      "pipeline": "Enrichment & Multi-factor Scoring",
+      "export": "HubSpot & Salesforce CRM Sync",
+      "architecture": "Event-driven microservice adhering to MCP 2024 spec, streaming LLM tool evaluation, latency < 180ms"
+    },
+    "featured": true,
+    "image_alias": "leadforge"
+  },
+  {
+    "id": 2,
+    "name": "qa-ai-assistant",
+    "display_name": "qa-ai-assistant (VerityQA)",
+    "full_name": "Grorrt/qa-ai-assistant",
+    "description": "AI-powered QA assistant for automated quality checks, requirement-to-review flows, and structured test generation.",
+    "custom_description": "Local-first AI QA assistant orchestrating requirement-to-test transformations. Validates specification invariants, generates end-to-end Playwright and PyTest suites, and categorizes regression risk with structured semantic diffs.",
+    "language": "Python / JavaScript",
+    "html_url": "https://github.com/Grorrt/qa-ai-assistant",
+    "stargazers_count": 18,
+    "forks_count": 4,
+    "updated_at": "2026-09-20T11:45:00Z",
+    "created_at": "2026-04-03T16:20:00Z",
+    "topics": ["fastapi", "react", "qa-automation", "pytest", "ai-testing", "playwright"],
+    "key_details": {
+      "flow": "Requirement-to-Review Flow",
+      "test_output": "Structured Test Spec & Assertions",
+      "design": "Local-First & Privacy-Preserving",
+      "architecture": "FastAPI async backend with PyTorch embeddings for test deduplication and React glassmorphic review console"
+    },
+    "featured": true,
+    "image_alias": "verityqa"
+  },
+  {
+    "id": 3,
+    "name": "malware_analysis_toolkit_by_grorrt",
+    "full_name": "Grorrt/malware_analysis_toolkit_by_grorrt",
+    "description": "Python-based malware analysis toolkit with static PE parsing, entropy inspection, YARA detection, and forensic reporting.",
+    "custom_description": "Production-grade automated static analysis suite for suspicious PE binaries and scripts. Extracts portable executable headers, calculates section Shannon entropy, matches custom YARA rulesets, and computes imphash fingerprints.",
+    "language": "Python",
+    "html_url": "https://github.com/Grorrt/malware_analysis_toolkit_by_grorrt",
+    "stargazers_count": 22,
+    "forks_count": 6,
+    "updated_at": "2026-08-14T19:10:00Z",
+    "created_at": "2026-02-19T08:00:00Z",
+    "topics": ["malware-analysis", "security-tools", "yara", "pefile", "reverse-engineering"],
+    "key_details": {
+      "setup": "Python 3.11+, poetry install, libyara bindings",
+      "use_case": "Automated triage for SOC analysts and reverse engineers",
+      "capabilities": "Section entropy heatmap, imports hash analyzer, string de-obfuscation"
+    },
+    "featured": false
+  },
+  {
+    "id": 4,
+    "name": "atlas-core",
+    "full_name": "Grorrt/atlas-core",
+    "description": "Full-stack platform with backend, frontend, data, and migrations.",
+    "custom_description": "Enterprise-ready full-stack foundations platform providing high-concurrency API gateways, declarative database migrations, resilient message queues, and a strictly typed frontend state client.",
+    "language": "Python / JavaScript",
+    "html_url": "https://github.com/Grorrt/atlas-core",
+    "stargazers_count": 9,
+    "forks_count": 2,
+    "updated_at": "2026-07-29T15:50:00Z",
+    "created_at": "2026-01-10T12:00:00Z",
+    "topics": ["full-stack", "database-migrations", "api-gateway", "python", "typescript"],
+    "key_details": {
+      "architecture": "Clean Architecture with Domain-Driven Design (DDD)",
+      "test_suite": "100+ unit, integration, and load tests (PyTest + Vitest)",
+      "api_flow": "JWT authentication, OpenAPI contract validation, rate-limiting proxy"
+    },
+    "featured": false
+  },
+  {
+    "id": 5,
+    "name": "Home",
+    "full_name": "Grorrt/Home",
+    "description": "Personal portfolio / home page showcasing engineering projects and technical articles.",
+    "custom_description": "Personal developer portfolio and engineering showcase designed with modern typography, client-side GitHub REST API caching, dark/light theme persistence, and recruiter communication workflows.",
+    "language": "HTML",
+    "html_url": "https://github.com/Grorrt/Home",
+    "stargazers_count": 7,
+    "forks_count": 1,
+    "updated_at": "2026-10-01T22:15:00Z",
+    "created_at": "2026-06-01T10:00:00Z",
+    "topics": ["portfolio", "html", "tailwind", "responsive-design", "recruiter-friendly"],
+    "key_details": {
+      "live_demo": "Active web deployment with sub-100ms first contentful paint",
+      "last_commit": "Updated October 2026 with 1-hour TTL cache layer",
+      "architecture": "Single-page responsive design with accessibility-first semantic layout"
+    },
+    "featured": false
+  }
+]

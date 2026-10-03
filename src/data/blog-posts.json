@@ -1,0 +1,109 @@
+[
+  {
+    "id": "verityqa-fastapi-react-architecture",
+    "slug": "building-an-ai-powered-qa-assistant-with-fastapi-and-react",
+    "title": "Building an AI-Powered QA Assistant with FastAPI and React",
+    "excerpt": "A deep dive into VerityQA's architecture: transforming loose product specifications into deterministic, structured test suites using FastAPI, AST parsing, and a local-first React review flow.",
+    "date": "2026-09-18",
+    "readTime": "6 min read",
+    "tags": ["FastAPI", "React", "AI Testing", "Python", "Local-First"],
+    "metaDescription": "Learn how VerityQA bridges the gap between ambiguous requirements and automated testing with FastAPI async processing and local-first React orchestration.",
+    "projectRef": "qa-ai-assistant",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In fast-moving engineering teams, the widest chasm is between product requirements and comprehensive test coverage. While writing user stories is quick, translating those specifications into executable, deterministic PyTest and Playwright assertions often introduces human oversight and regression lag. This friction inspired the development of VerityQA (qa-ai-assistant)."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Requirement-to-Review Lifecycle"
+      },
+      {
+        "type": "paragraph",
+        "text": "VerityQA does not blindly generate code blobs. Instead, it breaks down the QA lifecycle into a structured multi-pass pipeline:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Requirement Ingestion: Parses Markdown PRDs or Jira tickets into unambiguous behavioral invariants.",
+          "State & Boundary Extraction: Maps inputs, expected states, edge cases (empty states, latency spikes, rate limits).",
+          "Deterministic Test Generation: Produces typed test specs conforming to existing repository conventions.",
+          "Interactive Human Review: A local-first React workspace where developers inspect the generated tests, view diffs, and approve before commit."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Architecture Breakdown: FastAPI + Local-First React"
+      },
+      {
+        "type": "paragraph",
+        "text": "The backend runs as a lightweight, privacy-preserving FastAPI microservice. Keeping it local-first guarantees that sensitive proprietary codebases and unreleased feature specs never leave the developer's workstation without explicit configuration."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "code": "from fastapi import FastAPI, BackgroundTasks\nfrom pydantic import BaseModel\n\nclass RequirementSpec(BaseModel):\n    feature_name: str\n    user_flow: list[str]\n    constraints: list[str]\n\n@app.post('/api/qa/analyze')\nasync def analyze_spec(spec: RequirementSpec):\n    # Extract state invariants & generate deterministic PyTest assertions\n    invariants = extract_state_invariants(spec.user_flow)\n    test_suite = generate_typed_assertions(invariants, spec.constraints)\n    return {\n        'status': 'ready_for_review',\n        'invariants_checked': len(invariants),\n        'test_cases': test_suite\n    }"
+      },
+      {
+        "type": "paragraph",
+        "text": "By structuring the output as validated Pydantic schemas rather than arbitrary markdown, the React frontend can render interactive syntax-highlighted assertions with inline acceptance toggles."
+      }
+    ]
+  },
+  {
+    "id": "automating-lead-qualification-mcp",
+    "slug": "automating-lead-qualification-with-the-model-context-protocol",
+    "title": "Automating Lead Qualification with the Model Context Protocol",
+    "excerpt": "How LeadForge MCP utilizes 10 specialized agent tools and an enrichment scoring pipeline to qualify enterprise leads through the Model Context Protocol.",
+    "date": "2026-08-30",
+    "readTime": "8 min read",
+    "tags": ["MCP", "AI Agents", "JavaScript", "CRM", "API Design"],
+    "metaDescription": "Explore how LeadForge MCP integrates with Claude Desktop, Cursor, and enterprise LLMs via MCP to automate multi-factor lead qualification and CRM synchronization.",
+    "projectRef": "leadforge-mcp",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Anthropic's Model Context Protocol (MCP) has fundamentally shifted how AI agents interact with external data sources and execution environments. Instead of brittle custom function calling and fragmented webhook bridges, MCP standardizes protocol-level tool registration, resource streaming, and prompt templates."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Why MCP for Inbound Lead Qualification?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Traditional inbound qualification relies either on manual SDR triage or brittle rules-based form gates. With LeadForge MCP, LLMs gain direct, authenticated access to 10 specialized micro-tools:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "lookup_company_domain: Resolves firmographic data (headcount, funding, tech stack).",
+          "evaluate_icp_fit: Computes weighted scores based on customizable qualification rubrics.",
+          "detect_buying_intent: Analyzes public signals, job postings, and technological adoption patterns.",
+          "enrich_contact_persona: Identifies key decision makers and org chart hierarchy.",
+          "export_to_crm: Syncs qualified leads directly to HubSpot, Salesforce, or Close."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Multi-Factor ICP Scoring Pipeline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Rather than a simple binary pass/fail, LeadForge implements a 4-dimensional scoring matrix: Company Fit (35%), Tech Stack Match (25%), Growth Signals (20%), and Authority Score (20%)."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "// Registering LeadForge qualification tool with the MCP Server\nserver.setRequestHandler(ListToolsRequestSchema, async () => ({\n  tools: [\n    {\n      name: 'qualify_lead',\n      description: 'Scores a lead against ideal customer profile parameters',\n      inputSchema: {\n        type: 'object',\n        properties: {\n          domain: { type: 'string' },\n          contact_title: { type: 'string' },\n          annual_revenue_range: { type: 'string' }\n        },\n        required: ['domain']\n      }\n    }\n  ]\n}));"
+      },
+      {
+        "type": "paragraph",
+        "text": "The result is sub-second, auditable qualification that any MCP-compliant client (Claude, Cursor, custom agents) can trigger on demand."
+      }
+    ]
+  }
+]
